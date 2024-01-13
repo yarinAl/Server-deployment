@@ -1,0 +1,16 @@
+/api/dist
+/ui/dist
+
+/ui/.angular/cache
+
+/api/node_modules
+/api/.env
+/ui/node_modules
+
+# Node.js
+node_modules/
+
+# Logs
+*.log
+
+.env
