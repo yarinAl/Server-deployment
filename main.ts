@@ -35,14 +35,6 @@ app.use('/login', loginRouter)
 
 app.use('/register', registerRouter)
 
-//connect to db
-// mongoose
-//   .connect(process.env.MONG_URI ?? '')
-//   .then(() => {})
-//   .catch((error) => {
-//     console.log(error)
-//   })
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
 })
