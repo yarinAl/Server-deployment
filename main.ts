@@ -1,7 +1,6 @@
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
-import mongoose from 'mongoose'
 import { router as episodeRouter } from './routers/episodesRouter'
 import { router as loginRouter } from './routers/loginRouter'
 import { router as registerRouter } from './routers/registerRouter'
@@ -37,12 +36,12 @@ app.use('/login', loginRouter)
 app.use('/register', registerRouter)
 
 //connect to db
-mongoose
-  .connect(process.env.MONG_URI ?? '')
-  .then(() => {})
-  .catch((error) => {
-    console.log(error)
-  })
+// mongoose
+//   .connect(process.env.MONG_URI ?? '')
+//   .then(() => {})
+//   .catch((error) => {
+//     console.log(error)
+//   })
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
