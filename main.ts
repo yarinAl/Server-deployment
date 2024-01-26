@@ -1,6 +1,7 @@
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
+import { join } from 'path'
 import { router as episodeRouter } from './routers/episodesRouter'
 import { router as loginRouter } from './routers/loginRouter'
 import { router as registerRouter } from './routers/registerRouter'
@@ -14,6 +15,7 @@ const port = 3000
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static(join(__dirname, 'ui/deploy')))
 
 app.use('/home', () => {
   // get all shows
